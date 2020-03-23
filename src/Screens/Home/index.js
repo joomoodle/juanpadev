@@ -1,22 +1,31 @@
 import React, { useState } from "react";
 import { Head } from "../../Components";
-import { Container, Row1, Row2, Iam, Des, Social, SocialItem, ImgSocial } from "./Styles";
+import {
+  Container,
+  Row1,
+  Row2,
+  Iam,
+  Des,
+  Social,
+  SocialItem,
+  ImgSocial
+} from "./Styles";
 
 const socialMedia = [
   {
     id: 1,
     name: "GitHub.png",
-    link: ""
+    link: "https://github.com/joomoodle/"
   },
   {
     id: 2,
     name: "facebook.png",
-    link: ""
+    link: "https://www.facebook.com/joomoodle"
   },
   {
     id: 2,
     name: "instagram.png",
-    link: ""
+    link: "https://www.instagram.com/joomoodle/"
   },
   {
     id: 2,
@@ -29,10 +38,9 @@ function Home() {
     return socialMedia.map(item => (
       <SocialItem>
         {item.name ? (
-          <ImgSocial
-            src={`${process.env.PUBLIC_URL}/${item.name}`}
-            alt="#"
-          />
+          <a href={item.link}>
+            <ImgSocial src={`${process.env.PUBLIC_URL}/${item.name}`} alt="#" />
+          </a>
         ) : (
           ""
         )}
@@ -66,51 +74,11 @@ function Home() {
 }
 
 const styles = {
-  main: {
-    display: "flex",
-    flexDirection: "row"
-  },
-  row1: {
-    width: "60%"
-  },
-  row2: {
-    width: "40%"
-  },
-  nameTitle: {
-    fontSize: 45,
-    color: "#ffffff",
-    fontWeight: "bold",
-    paddingLeft: 100
-  },
-  desTitle: {
-    fontSize: 40,
-    color: "#ffffff",
-    paddingLeft: 100
-  },
   img: {
     width: "95%",
     objectFill: "contain",
     verticalAlign: "middle",
     borderStyle: "none"
-  },
-  social: {
-    paddingLeft: 100
-  },
-  socialItem: {
-    marginRight: 20,
-    display: "inline-block",
-    borderRadius: "50%",
-    width: 40,
-    height: 40,
-    borderWidth: 5,
-    border: "rgb(255, 74, 87) 3px solid"
-  },
-  imgIcon: {
-    width: 25,
-    height: 25,
-    position: "absolute",
-    marginTop: 7,
-    marginLeft: 7
   }
 };
 export default Home;

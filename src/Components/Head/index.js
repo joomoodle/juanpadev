@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import MenuIcon from '@material-ui/icons/Menu';
-import Styles, { MainContainer, SideMenu, Menu, Hamburgesa} from "./Styles";
+import MenuIcon from "@material-ui/icons/Menu";
+import { IconButton } from "@material-ui/core";
+import Styles, {
+  MainContainer,
+  SideMenu,
+  Menu,
+  Hamburgesa,
+  UlMobile,
+  LinkA,
+  LinkLi
+} from "./Styles";
 
 const menu = [
   {
     index: 0,
     text: "Inicio",
-    action: "#"
+    action: "Home"
   },
   {
     index: 1,
@@ -26,13 +35,15 @@ const menu = [
   }
 ];
 const Head = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const renderMenu = () => {
     return menu.map(item => (
-      <li style={Styles.li} key={item.index}>
-        <NavLink to={item.action} style={Styles.a}>
+      <LinkLi key={item.index}>
+        <LinkA href={item.action}>
           {item.text}
-        </NavLink>
-      </li>
+        </LinkA>
+      </LinkLi>
     ));
   };
 
@@ -48,9 +59,30 @@ const Head = () => {
           <ul style={Styles.ul}>{renderMenu()}</ul>
         </Menu>
         <Hamburgesa>
-          <MenuIcon  style={{color: '#ffffff', fontSize: 40 }}/>
+          <IconButton
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <MenuIcon style={{ color: "#ffffff", fontSize: 40 }} />
+          </IconButton>
         </Hamburgesa>
       </SideMenu>
+      {isOpen ? (
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            backgroundColor: "#1F2235",
+            zIndex: 10,
+            top: 85
+          }}
+        >
+          <UlMobile>{renderMenu()}</UlMobile>
+        </div>
+      ) : (
+        ""
+      )}
     </MainContainer>
   );
 };

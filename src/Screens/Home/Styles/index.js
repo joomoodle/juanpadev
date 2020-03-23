@@ -58,18 +58,16 @@ const SocialItem = styled.div`
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: 5px solid rgb(255, 74, 87);
+  border: 2px solid rgb(255, 74, 87);
 `;
 
 const ImgSocial = styled.img`
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  margin-top: 7px;
-  margin-left: 7px;
+  padding:10px;
   @media (max-width: 768px) {
-    margin-top: 7px;
-    margin-left: -14px;
+    margin-left: -20px;
   }
 `;
 

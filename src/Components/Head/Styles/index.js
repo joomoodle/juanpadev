@@ -34,7 +34,34 @@ const Hamburgesa = styled.div`
   }
 `;
 
-export { MainContainer, SideMenu, Menu, Hamburgesa };
+const UlMobile = styled.ul`
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+`;
+
+const LinkLi = styled.li`
+  display: inline;
+
+  margin: 20px;
+  @media (max-width: 1024px) {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 100px;
+  }
+`;
+
+const LinkA = styled.a`
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 28px;
+`;
+
+export { MainContainer, SideMenu, Menu, Hamburgesa, UlMobile, LinkA, LinkLi };
 
 export default {
   header: {
