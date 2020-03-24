@@ -14,6 +14,15 @@ const divColumn = styled.div`
 const DivRow = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 1024px) {
+    .row1 {
+      display: none;
+    }
+    .row2 {
+      width: 100% !important;
+      margin-left: 20px;
+    }
+  }
 `;
 
 const Title = styled.h3`

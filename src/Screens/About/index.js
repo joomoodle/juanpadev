@@ -9,14 +9,14 @@ function About() {
       <Container>
         <DivRowCenter>
           <DivRow>
-            <div style={{ width: "45%" }}>
+            <div style={{ width: "45%" }} className={'row1'}>
               <img
                 src={`${process.env.PUBLIC_URL}/dev_avatar.png`}
                 alt=""
                 style={{ width: "80%", paddingLeft: 50, top: -10 }}
               />
             </div>
-            <div style={{ width: "55%" }}>
+            <div style={{ width: "55%" }} className={'row2'}>
               <h2 style={{ color: "#ffffff" }}>Hola</h2>
               <p
                 style={{
@@ -25,6 +25,7 @@ function About() {
                   marginRight: 40,
                   fontSize: 22
                 }}
+                className={'pDesc'}
               >
                 Casi todo el tiempo desde que egrese de la universidad
                 tecnológica de Xicotepec de Juárez me dedique al desarrollo web

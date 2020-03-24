@@ -45,6 +45,11 @@ const DivItem = styled.div`
       transform: rotateY(0);
     }
   }
+  @media (max-width: 1024px) {
+    max-width: 95%;
+    flex: 0 0 95%;
+
+  }
 `;
 
 const DivContainer = styled.div`
