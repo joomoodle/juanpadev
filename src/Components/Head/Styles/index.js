@@ -45,7 +45,6 @@ const UlMobile = styled.ul`
 
 const LinkLi = styled.li`
   display: inline;
-
   margin: 20px;
   @media (max-width: 1024px) {
     display: block;
@@ -59,6 +58,9 @@ const LinkA = styled.a`
   text-decoration: none;
   color: #ffffff;
   font-size: 28px;
+  &:hover {
+    color: rgb(255, 74, 87);
+  }
 `;
 
 export { MainContainer, SideMenu, Menu, Hamburgesa, UlMobile, LinkA, LinkLi };
@@ -88,7 +90,7 @@ export default {
   ul: {
     listStyleType: "none",
     margin: 0,
-    padding: 0
+    paddingLeft: 80
   },
   li: {
     display: "inline",
@@ -97,6 +99,10 @@ export default {
   a: {
     color: "#ffffff",
     fontSize: 28,
-    textDecoration: "none"
+    textDecoration: "none",
+    '&:hover': {
+      color: 'rgb(255, 74, 87)',
+
+    }
   }
 };

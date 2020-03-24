@@ -16,17 +16,17 @@ const menu = [
   {
     index: 0,
     text: "Inicio",
-    action: "Home"
+    action: "/home"
   },
   {
     index: 1,
     text: "Acerca de mi",
-    action: "#"
+    action: "/about"
   },
   {
     index: 2,
     text: "Portafolio",
-    action: "#"
+    action: "/portafolio"
   },
   {
     index: 3,
@@ -40,9 +40,9 @@ const Head = () => {
   const renderMenu = () => {
     return menu.map(item => (
       <LinkLi key={item.index}>
-        <LinkA href={item.action}>
+        <NavLink to={item.action} style={Styles.a}>
           {item.text}
-        </LinkA>
+        </NavLink>
       </LinkLi>
     ));
   };
@@ -63,6 +63,7 @@ const Head = () => {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
+            style={{ top: -14 }}
           >
             <MenuIcon style={{ color: "#ffffff", fontSize: 40 }} />
           </IconButton>

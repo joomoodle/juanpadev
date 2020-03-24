@@ -59,13 +59,16 @@ const SocialItem = styled.div`
   width: 40px;
   height: 40px;
   border: 2px solid rgb(255, 74, 87);
+  &:hover {
+    background-color: rgb(255, 74, 87);
+  }
 `;
 
 const ImgSocial = styled.img`
   width: 20px;
   height: 20px;
   position: absolute;
-  padding:10px;
+  padding: 10px;
   @media (max-width: 768px) {
     margin-left: -20px;
   }

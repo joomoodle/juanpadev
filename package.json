@@ -1,8 +1,8 @@
 {
   "name": "juanpa",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
-  "homepage": "https://joomoodle.github.io/juanpadev/",
+  "homepage": "https://joomoodle.github.io/juanpadev",
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",

@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import Home from "./Screens/Home";
-
+import About from "./Screens/About";
+import Portafolio from "./Screens/Portafolio";
 export default class Routes extends Component {
   render() {
     return (
       <Switch>
         <Redirect exact from="/" to="/home" />
-        <Route component={Home} exact path="/home" />
+        <Route path="/home" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/portafolio" exact component={Portafolio} />
       </Switch>
     );
   }
