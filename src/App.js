@@ -3,7 +3,7 @@ import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Routes from "./Routes";
 const historyConfig = {
-  basename: "juanpadev"
+  basename: ""
 };
 
 const browserHistory = createBrowserHistory(historyConfig);

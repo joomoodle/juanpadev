@@ -2,7 +2,10 @@
   "name": "juanpa",
   "version": "0.1.2",
   "private": true,
-  "homepage": "https://joomoodle.github.io/juanpadev",
+  "engines": {
+    "node": "12.14.1",
+    "npm": "6.13.4"
+  },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",

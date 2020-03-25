@@ -4,6 +4,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./Screens/Home";
 import About from "./Screens/About";
 import Portafolio from "./Screens/Portafolio";
+import Contact from "./Screens/Contact";
+
 export default class Routes extends Component {
   render() {
     return (
@@ -12,6 +14,7 @@ export default class Routes extends Component {
         <Route path="/home" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/portafolio" exact component={Portafolio} />
+        <Route path="/contacto" exact component={Contact} />
       </Switch>
     );
   }

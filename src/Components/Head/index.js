@@ -31,7 +31,7 @@ const menu = [
   {
     index: 3,
     text: "Contacto",
-    action: "#"
+    action: "/contacto"
   }
 ];
 const Head = () => {
