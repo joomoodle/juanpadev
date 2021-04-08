@@ -1,51 +1,73 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-const Row1 = styled.div`
-  width: 60%;
-  @media (max-width: 768px) {
+  min-height: 410px;
+  width: 100%;
+  & > .jumbotron {
     width: 100%;
-  }
-  @media (max-width: 1024px) {
-    width: 100%;
+    min-height: 410px;
+    position: relative;
+    z-index: 5;
+    color: white;
+    background-image: linear-gradient(
+      to right bottom,
+      #2d84c3,
+      #1074bd,
+      #0064b7,
+      #0053ae,
+      #0242a4
+    );
+    opacity: 0.8;
+    & > .title-1 {
+      display: inline-block;
+      margin-top: 100px;
+      margin-left: 50px;
+      font-size: 30px;
+      font-weight: 900;
+      background-color: #ffffff;
+      color: #2d84c3;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    & > .title-2 {
+      display: inline-block;
+      margin-left: 50px;
+      font-size: 34px;
+      font-weight: bold;
+    }
+    & > .desc {
+      display: inline-block;
+      margin-left: 50px;
+      font-size: 24px;
+      font-weight: 400;
+    }
   }
 `;
 
-const Row2 = styled.div`
-  width: 40%;
-  @media (max-width: 768px) {
-    display: none;
-  }
-  @media (max-width: 1024px) {
-    display: none;
-  }
+const ImgMe = styled.img`
+  object-fill: cover;
+  height: 400px;
+  right: 100px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  float: right;
+  padding-top: 10px;
 `;
 
-const Iam = styled.div`
-  font-size: 45px;
-  font-weight: bold;
-  padding-left: 100px;
-  color: #ffffff;
-  @media (max-width: 768px) {
-    text-align: center;
-    padding-left: 20px;
-  }
-`;
-
-const Des = styled.div`
-  font-size: 40px;
-  color: #ffffff;
-  padding-left: 100px;
-  @media (max-width: 768px) {
-    text-align: center;
-    padding-left: 20px;
-  }
+const ImgFondo = styled.img`
+  object-fill: cover;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  float: right;
+  padding-top: 10px;
 `;
 const Social = styled.div`
-  padding-left: 100px;
+  margin-left: 54px;
+  margin-top: 15px;
   @media (max-width: 768px) {
     text-align: center;
     padding-left: 20px;
@@ -74,4 +96,4 @@ const ImgSocial = styled.img`
   }
 `;
 
-export { Container, Row1, Row2, Iam, Des, Social, SocialItem, ImgSocial };
+export { Container, ImgMe, Social, SocialItem, ImgSocial , ImgFondo};

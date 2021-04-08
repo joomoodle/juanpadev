@@ -1,44 +1,36 @@
 import React, { useState } from "react";
-import { Head } from "../../Components";
-import {
-  Container,
-  Row1,
-  Row2,
-  Iam,
-  Des,
-  Social,
-  SocialItem,
-  ImgSocial
-} from "./Styles";
+
+import { Container, ImgMe, SocialItem, ImgSocial, Social, ImgFondo } from "./Styles";
 
 const socialMedia = [
   {
     id: 1,
     name: "GitHub.png",
-    link: "https://github.com/joomoodle/"
+    link: "https://github.com/joomoodle/",
   },
   {
     id: 2,
     name: "facebook.png",
-    link: "https://www.facebook.com/joomoodle"
+    link: "https://www.facebook.com/joomoodle",
   },
   {
-    id: 2,
+    id: 3,
     name: "instagram.png",
-    link: "https://www.instagram.com/joomoodle/"
+    link: "https://www.instagram.com/jdionicio_/",
   },
   {
-    id: 2,
+    id: 4,
     name: "linkedin.png",
-    link: ""
-  }
+    link: "https://www.linkedin.com/in/juan-dionicio-621600aa/",
+  },
 ];
+
 function Home() {
   const renderSocial = () => {
-    return socialMedia.map(item => (
+    return socialMedia.map((item) => (
       <SocialItem>
         {item.name ? (
-          <a href={item.link}>
+          <a href={item.link} target="_blank">
             <ImgSocial src={`${process.env.PUBLIC_URL}/${item.name}`} alt="#" />
           </a>
         ) : (
@@ -47,38 +39,27 @@ function Home() {
       </SocialItem>
     ));
   };
-
   return (
     <>
-      <Head />
       <Container>
-        <Row1>
-          <div style={{ paddingTop: 150 }}>
-            <Social>{renderSocial()}</Social>
-            <Iam>Soy Juan Pablo Dionicio</Iam>
-            <Des>
-              Desarrollador web profesional con larga experiencia en este campo.
-            </Des>
-          </div>
-        </Row1>
-        <Row2>
-          <img
-            src={`${process.env.PUBLIC_URL}/dev_1.png`}
-            alt=""
-            style={styles.img}
-          />
-        </Row2>
+        <ImgFondo  src={`${process.env.PUBLIC_URL}/fondo.jpg`} />
+        <ImgMe src={`${process.env.PUBLIC_URL}/me.png`} />
+        <div class="jumbotron">
+          <span className={"title-1"}>Hola</span> <br />
+          <span className={"title-2"}>
+            Soy desarrollador frontend & Backend
+          </span>
+          <br />
+          <span className={"desc"}>
+            Me gusta el mundo de la progración hace ya 7 años que inicie en este
+            mundo
+          </span>
+          <br />
+          <Social>{renderSocial()}</Social>
+        </div>
       </Container>
     </>
   );
 }
 
-const styles = {
-  img: {
-    width: "95%",
-    objectFill: "contain",
-    verticalAlign: "middle",
-    borderStyle: "none"
-  }
-};
 export default Home;
