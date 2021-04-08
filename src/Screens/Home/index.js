@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 
-import { Container, ImgMe, SocialItem, ImgSocial, Social, ImgFondo } from "./Styles";
+import {
+  Container,
+  ImgMe,
+  SocialItem,
+  ImgSocial,
+  Social,
+  ImgFondo,
+  ContainerServices,
+  Grid,
+  GridItem,
+} from "./Styles";
 
 const socialMedia = [
   {
@@ -42,8 +52,8 @@ function Home() {
   return (
     <>
       <Container>
-        <ImgFondo  src={`${process.env.PUBLIC_URL}/fondo.jpg`} />
-        <ImgMe src={`${process.env.PUBLIC_URL}/me.png`} />
+        <ImgFondo src={`${process.env.PUBLIC_URL}/fondo.jpg`} />
+        <ImgMe src={`${process.env.PUBLIC_URL}/profile.png`} />
         <div class="jumbotron">
           <span className={"title-1"}>Hola</span> <br />
           <span className={"title-2"}>
@@ -58,6 +68,37 @@ function Home() {
           <Social>{renderSocial()}</Social>
         </div>
       </Container>
+      <ContainerServices>
+        <h1 className={"title"}>Mis servicios</h1>
+        <span className={"desc"}>
+          He colaborado para empresas de desarrollo de software en cuales he
+          brindado los siguientes servicios:
+        </span>
+        <Grid>
+          <GridItem>
+            <h1 className={"title"}> Desarrollo web</h1>
+            <p>
+              Creación de sistemas y sitios web en diferentes lenguajes
+              "asp.net, angular, react js, html". He colaborado en los procesos
+              de creación y matenimiento
+            </p>
+          </GridItem>
+          <GridItem>
+            <h1 className={"title"}>Aplicaciónes móviles</h1>
+            <p>
+              He colaborado y creado aplicaciónes móviles como lo son
+              "billypays, crediempleado, winko wallet".
+            </p>
+          </GridItem>
+          <GridItem>
+            <h1 className={"title"}>Procesos automatizados </h1>
+            <p>
+              Hemos realizado procesos o tareas automatizadas para la generación
+              de cargos, dispersion de spei, notificaciones etc...
+            </p>
+          </GridItem>
+        </Grid>
+      </ContainerServices>
     </>
   );
 }

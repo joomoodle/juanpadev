@@ -96,4 +96,53 @@ const ImgSocial = styled.img`
   }
 `;
 
-export { Container, ImgMe, Social, SocialItem, ImgSocial , ImgFondo};
+const ContainerServices = styled.div`
+  background-color: #fafafa;
+  padding: 10px;
+  & > .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+  }
+  & > .desc {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #2d84c3;
+  }
+`;
+
+const Grid = styled.div`
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  margin-bottom: 30px;
+`;
+
+const GridItem = styled.div`
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0px -1px 5px -1px rgba(107,107,107,1);
+  border-radius: 5px;
+  min-height: 100px;
+  & > .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+  }
+`;
+
+export {
+  Container,
+  ImgMe,
+  Social,
+  SocialItem,
+  ImgSocial,
+  ImgFondo,
+  ContainerServices,
+  Grid,
+  GridItem,
+};
