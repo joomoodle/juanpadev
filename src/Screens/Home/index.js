@@ -61,7 +61,7 @@ function Home() {
           </span>
           <br />
           <span className={"desc"}>
-            Me gusta el mundo de la progración hace ya 7 años que inicie en este
+            Me gusta el mundo de la programación hace ya 7 años que inicie en este
             mundo
           </span>
           <br />
