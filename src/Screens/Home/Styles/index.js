@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  min-height: 410px;
+  min-height: 380px;
   width: 100%;
   & > .jumbotron {
     width: 100%;
-    min-height: 410px;
+    min-height: 380px;
     position: relative;
     z-index: 5;
     color: white;
@@ -46,7 +46,7 @@ const Container = styled.div`
 
 const ImgMe = styled.img`
   object-fill: cover;
-  height: 400px;
+  height: 370px;
   right: 100px;
   position: absolute;
   top: 0;
@@ -57,13 +57,13 @@ const ImgMe = styled.img`
 
 const ImgFondo = styled.img`
   object-fill: cover;
-  height: 400px;
+  height: 380px;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: 1;
   float: right;
-  padding-top: 10px;
+  padding-top: 0px;
 `;
 const Social = styled.div`
   margin-left: 54px;
@@ -133,8 +133,32 @@ const GridItem = styled.div`
     font-size: 32px;
     font-weight: 600;
   }
+  & > p {
+    font-size: 22px;
+    font-weight: 200;
+  }
 `;
 
+const Tags = styled.div`
+  margin-left: 54px;
+  margin-top: 15px;
+  @media (max-width: 768px) {
+    text-align: center;
+    padding-left: 20px;
+  }
+`;
+
+const TextTags = styled.span`
+  display: inline;
+  background-color: #ffffff;
+  color: #2d84c3;
+  border-radius: 20px;
+  margin: 2px;
+  padding: 0px 8px 0px 8px; 
+  font-size: 22px;
+  font-weight: 500;
+
+`
 export {
   Container,
   ImgMe,
@@ -145,4 +169,6 @@ export {
   ContainerServices,
   Grid,
   GridItem,
+  Tags,
+  TextTags
 };

@@ -10,6 +10,8 @@ import {
   ContainerServices,
   Grid,
   GridItem,
+  Tags as ContainerTags,
+  TextTags,
 } from "./Styles";
 
 const socialMedia = [
@@ -35,6 +37,16 @@ const socialMedia = [
   },
 ];
 
+const tags = [
+  "c#",
+  ".net core",
+  "visual basic",
+  "javascript",
+  "react js",
+  "react native",
+  "angular",
+];
+
 function Home() {
   const renderSocial = () => {
     return socialMedia.map((item) => (
@@ -49,6 +61,9 @@ function Home() {
       </SocialItem>
     ));
   };
+
+  const RenderTags = () => tags.map((item) => <TextTags>{item}</TextTags>);
+
   return (
     <>
       <Container>
@@ -61,11 +76,12 @@ function Home() {
           </span>
           <br />
           <span className={"desc"}>
-            Me gusta el mundo de la programación hace ya 7 años que inicie en este
-            mundo
+            Me gusta el mundo de la programación hace ya 7 años que inicie en
+            este mundo
           </span>
           <br />
           <Social>{renderSocial()}</Social>
+          <ContainerTags>{RenderTags()}</ContainerTags>
         </div>
       </Container>
       <ContainerServices>
@@ -80,21 +96,22 @@ function Home() {
             <p>
               Creación de sistemas y sitios web en diferentes lenguajes
               "asp.net, angular, react js, html". He colaborado en los procesos
-              de creación y matenimiento
+              de creación de sistemas ERP y mantenimientos de sistemas webs
             </p>
           </GridItem>
           <GridItem>
             <h1 className={"title"}>Aplicaciónes móviles</h1>
             <p>
-              He colaborado y creado aplicaciónes móviles como lo son
-              "billypays, crediempleado, winko wallet".
+              He desarrollador aplicaciones tipo Erp para procesos como pagos de
+              servicios, administración de carteras, encuestas y aplicaciones de
+              estadisticas en tiempo real
             </p>
           </GridItem>
           <GridItem>
             <h1 className={"title"}>Procesos automatizados </h1>
             <p>
               Hemos realizado procesos o tareas automatizadas para la generación
-              de cargos, dispersion de spei, notificaciones etc...
+              de cargos a sistemas de cobranza, dispersion de dinero por spei, notificaciones etc...
             </p>
           </GridItem>
         </Grid>
