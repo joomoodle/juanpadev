@@ -13,6 +13,7 @@ import {
   Tags as ContainerTags,
   TextTags,
 } from "./Styles";
+import { ReactTinyLink } from "react-tiny-link";
 
 const socialMedia = [
   {
@@ -102,17 +103,28 @@ function Home() {
           <GridItem>
             <h1 className={"title"}>Aplicaciónes móviles</h1>
             <p>
-              He desarrollador aplicaciones tipo Erp para procesos como pagos de
-              servicios, administración de carteras, encuestas y aplicaciones de
-              estadisticas en tiempo real
+              Creación de aplicaciones móviles de administración de cartera,
+              pago se servicios, gestion de encuestas y otros.
             </p>
           </GridItem>
           <GridItem>
             <h1 className={"title"}>Procesos automatizados </h1>
             <p>
               Hemos realizado procesos o tareas automatizadas para la generación
-              de cargos a sistemas de cobranza, dispersion de dinero por spei, notificaciones etc...
+              de cargos a sistemas de cobranza, dispersion de dinero por spei,
+              notificaciones etc...
             </p>
+          </GridItem>
+        </Grid>
+        <Grid>
+          <GridItem>
+            <ReactTinyLink
+              cardSize="large"
+              showGraphic={true}
+              maxLine={2}
+              minLine={1}
+              url="https://bpadmin.yotcuido.com/sign-in"
+            />
           </GridItem>
         </Grid>
       </ContainerServices>
