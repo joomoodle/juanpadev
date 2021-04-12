@@ -42,10 +42,24 @@ const Container = styled.div`
       font-weight: 400;
     }
   }
+
+  @media (max-width: 600px) {
+    & > .jumbotron {
+      & > .title-1 {
+        margin-left: 15px;
+      }
+      & > .title-2 {
+        margin-left: 15px;
+      }
+      & > .desc {
+        margin-left: 15px;
+      }
+    }
+  }
 `;
 
 const ImgMe = styled.img`
-  object-fill: cover;
+  object-fit: cover;
   height: 370px;
   right: 100px;
   position: absolute;
@@ -53,10 +67,17 @@ const ImgMe = styled.img`
   z-index: 1;
   float: right;
   padding-top: 10px;
+  @media (max-width: 600px) { 
+    right: 0px;
+    height: 390px;
+    padding-top: 110px;
+    width: 100%;
+
+  }
 `;
 
 const ImgFondo = styled.img`
-  object-fill: cover;
+  object-fit: cover;
   height: 380px;
   width: 100%;
   position: absolute;
@@ -70,7 +91,7 @@ const Social = styled.div`
   margin-top: 15px;
   @media (max-width: 768px) {
     text-align: center;
-    padding-left: 20px;
+    padding-left: 5px;
   }
 `;
 
@@ -120,12 +141,16 @@ const Grid = styled.div`
   grid-template-rows: auto;
   grid-gap: 1rem;
   margin-bottom: 30px;
+  @media (max-width: 600px) { 
+    grid-template-columns: repeat(1, 1fr);
+
+  }
 `;
 
 const GridItem = styled.div`
   background-color: #ffffff;
   padding: 10px;
-  box-shadow: 0px -1px 5px -1px rgba(107,107,107,1);
+  box-shadow: 0px -1px 5px -1px rgba(107, 107, 107, 1);
   border-radius: 5px;
   min-height: 100px;
   & > .title {
@@ -144,7 +169,9 @@ const Tags = styled.div`
   margin-top: 15px;
   @media (max-width: 768px) {
     text-align: center;
-    padding-left: 20px;
+    padding-left: 5px;
+    margin-left: 10px;
+
   }
 `;
 
@@ -154,11 +181,16 @@ const TextTags = styled.span`
   color: #2d84c3;
   border-radius: 20px;
   margin: 2px;
-  padding: 0px 8px 0px 8px; 
+  padding: 0px 8px 0px 8px;
   font-size: 22px;
   font-weight: 500;
-
-`
+  @media (max-width: 768px) {
+    text-align: center;
+    padding-left: 5px;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+`;
 export {
   Container,
   ImgMe,
@@ -170,5 +202,5 @@ export {
   Grid,
   GridItem,
   Tags,
-  TextTags
+  TextTags,
 };
