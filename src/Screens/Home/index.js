@@ -116,6 +116,10 @@ function Home() {
             </p>
           </GridItem>
         </Grid>
+      </ContainerServices>
+      <ContainerServices>
+        <h1 className={"title"}>Proyectos</h1>
+        <span className={"desc"}>Algunos proyectos que he colaborado</span>
         <Grid>
           <GridItem>
             <ReactTinyLink
@@ -124,6 +128,24 @@ function Home() {
               maxLine={2}
               minLine={1}
               url="https://bpadmin.yotcuido.com/sign-in"
+            />
+          </GridItem>
+          <GridItem>
+            <ReactTinyLink
+              cardSize="large"
+              showGraphic={true}
+              maxLine={2}
+              minLine={1}
+              url="https://play.google.com/store/apps/details?id=com.billyp"
+            />
+          </GridItem>
+          <GridItem>
+            <ReactTinyLink
+              cardSize="large"
+              showGraphic={true}
+              maxLine={2}
+              minLine={1}
+              url="https://play.google.com/store/apps/details?id=www.alfiltecnologia.Winko"
             />
           </GridItem>
         </Grid>
